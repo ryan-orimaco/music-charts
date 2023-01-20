@@ -206,6 +206,7 @@ export class TaskbarComponent implements OnInit {
         var findString = new Array<string>();
         var firstCountry : any;
         var secondCountry : any;
+        $("#getCountry").hide();
 
           /*Create some precomposites when showing songs */
           $("#comparisonOfSong").show(); 
@@ -240,7 +241,7 @@ export class TaskbarComponent implements OnInit {
 
                 //Now using an if statement to ensure that the lenght is not less than 1
                 if(saveCountry.length > 6){
-                  $("#getCountry").hide()
+                  $("#getCountry").hide();
                   $("#secondSong").show();
                   $("#lastAlbum").show();
                   $("#lastGenre").hide();
