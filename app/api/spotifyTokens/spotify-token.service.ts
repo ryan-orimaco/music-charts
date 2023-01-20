@@ -5,15 +5,15 @@ import * as taskbarGet from "src/app/worldmap/taskbar/taskbar.component"
  * Another source: https://stackoverflow.com/questions/65520828/how-do-i-complete-authentication-using-the-spotify-web-api
  * Another source: https://developer.spotify.com/documentation/general/guides/authorization/
 */
-export const authEndpoint = "https://accounts.spotify.com/authorize"
-const redirectUri = "https://ryan-orimaco.github.io/music-charts/worldmap"
-const clientId = "55cf7d7ace8e434c9fbac98db55c75b3"
+export const endpoint = "https://accounts.spotify.com/authorize"
+const urlget = "https://ryan-orimaco.github.io/music-charts/worldmap"
+const client_Id = "55cf7d7ace8e434c9fbac98db55c75b3"
 const scope = [
   "user-read-currently-playing",
   "user-top-read",
   "user-modify-playback-state"
 ]
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope.join("%20")}&response_type=token&show_dialog=true`
+export const loginUrl = `${endpoint}?client_id=${client_Id}&redirect_uri=${urlget}&scope=${scope.join("%20")}&response_type=token&show_dialog=true`
 
 export function getTokenFromUrl(){
   //Now using this function we can split the data
