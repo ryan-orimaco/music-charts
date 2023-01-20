@@ -31,8 +31,8 @@ export class TaskbarComponent implements OnInit {
   //This creates the login page
   static authorize(){
     $("#signInButton").on("click",function(){
-        const getLogin = loginUrl.spotifyLinkURL
-        window.open(loginUrl.spotifyLinkURL);
+        const getLogin = loginUrl.loginUrl
+        window.open(loginUrl.loginUrl);
     });
   }
 
