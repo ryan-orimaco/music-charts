@@ -6,7 +6,7 @@ import * as taskbarGet from "src/app/worldmap/taskbar/taskbar.component"
  * Another source: https://developer.spotify.com/documentation/general/guides/authorization/
 */
 export const authEndpoint = "https://accounts.spotify.com/authorize"
-const redirectUri = "https://ryan-orimaco.github.io/music-charts/"
+const redirectUri = "https://ryan-orimaco.github.io/cs322-music/worldmap"
 const clientId = "55cf7d7ace8e434c9fbac98db55c75b3"
 const scope = [
   "user-read-currently-playing",
@@ -18,7 +18,7 @@ export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${re
 export function getTokenFromUrl(){
   //Now using this function we can split the data
   const convertUrl = String(taskbarGet.hello); //Converst the URL to a String
-  const firstConversion = String(convertUrl.split("https://ryan-orimaco.github.io/music-charts/worldmap#access_token="))
+  const firstConversion = String(convertUrl.split("https://ryan-orimaco.github.io/cs322-music/worldmap#access_token="))
   const finalConversion = String(firstConversion.split("&token_type=Bearer&expires_in=3600"))
   return finalConversion
     
