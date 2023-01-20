@@ -206,7 +206,7 @@ export class TaskbarComponent implements OnInit {
         var findString = new Array<string>();
         var firstCountry : any;
         var secondCountry : any;
-        $("#getCountry").hide();
+
 
           /*Create some precomposites when showing songs */
           $("#comparisonOfSong").show(); 
@@ -221,12 +221,10 @@ export class TaskbarComponent implements OnInit {
           //If the user clicks on the first country map it will go to a particular country.
       
             $.get('assets/countryNames2.txt',  function(data) {
-              $("#getCountry").hide();
               $("#playSong").hide();
                var myvar = data;
               $(myvar).css("fill", "yellow");
               $(myvar).on("click", async function(){
-                $("#getCountry").hide()
                 firstCountry = $(this).attr("title");
                 country1 = String(firstCountry);
                  findString = await spotifyApi.findCountry(country1);
