@@ -206,6 +206,7 @@ export class TaskbarComponent implements OnInit {
         var findString = new Array<string>();
         var firstCountry : any;
         var secondCountry : any;
+        $("#getCountry").hide(); //Ensures getting country hides
 
 
           /*Create some precomposites when showing songs */
@@ -222,10 +223,12 @@ export class TaskbarComponent implements OnInit {
       
             $.get('assets/countryNames2.txt',  function(data) {
               $("#playSong").hide();
+              $("#getCountry").hide();
                var myvar = data;
               $(myvar).css("fill", "yellow");
               $(myvar).on("click", async function(){
                 firstCountry = $(this).attr("title");
+                $("#getCountry").hide();
                 country1 = String(firstCountry);
                  findString = await spotifyApi.findCountry(country1);
                 $( "#firstSongCountry" ).text("Number One Song in: " + findString[0]).css("fontSize", "15px");
