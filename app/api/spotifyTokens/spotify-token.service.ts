@@ -18,7 +18,7 @@ export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${re
 export function getTokenFromUrl(){
   //Now using this function we can split the data
   const convertUrl = String(taskbarGet.hello); //Converst the URL to a String
-  const firstConversion = String(convertUrl.split("https://ryan-orimaco.github.io/cs322-music/worldmap#access_token="))
+  const firstConversion = String(convertUrl.split("https://ryan-orimaco.github.io/music-charts/worldmap#access_token="))
   const finalConversion = String(firstConversion.split("&token_type=Bearer&expires_in=3600"))
   return finalConversion
     
