@@ -237,7 +237,6 @@ export class TaskbarComponent implements OnInit {
                 findString[5] = `https://open.spotify.com/embed/track/${spotifyApi.songID[0]}?utm_source=generator`
                 $("#CurrentSong").attr("src", findString[5])
                 saveCountry.push(...findString);
-                $("#getCountry").css("display","none");
 
                 //Now using an if statement to ensure that the lenght is not less than 1
                 if(saveCountry.length > 6){
@@ -252,7 +251,6 @@ export class TaskbarComponent implements OnInit {
                   $( "#lastAlbum" ).text("Album: " + saveCountry[saveCountry.length-9]);
                   $( "#lastRelease" ).text("Release Date: " + saveCountry[saveCountry.length-8]);
                   $("#PreviousSong").attr("src", saveCountry[saveCountry.length-7])
-                  $("#getCountry").css("display","none");
                 }
                 
               
