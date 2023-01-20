@@ -227,6 +227,7 @@ export class TaskbarComponent implements OnInit {
                var myvar = data;
               $(myvar).css("fill", "yellow");
               $(myvar).on("click", async function(){
+                $("#comparisonOfSong").show(); 
                 firstCountry = $(this).attr("title");
                 $("#getCountry").hide();
                 country1 = String(firstCountry);
@@ -242,6 +243,7 @@ export class TaskbarComponent implements OnInit {
 
                 //Now using an if statement to ensure that the lenght is not less than 1
                 if(saveCountry.length > 6){
+                  $("#comparisonOfSong").show(); 
                   $("#getCountry").hide();
                   $("#secondSong").show();
                   $("#lastAlbum").show();
