@@ -54,7 +54,7 @@ export class TaskbarComponent implements OnInit {
     
      
 
-      if(window.location.href.includes("http://localhost:4200/worldmap#access_token"))
+      if(window.location.href.includes("https://ryan-orimaco.github.io/music-charts/worldmap#access_token"))
       {
         $("#signInButton").hide();
       //Gets the country names
