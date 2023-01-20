@@ -6,7 +6,7 @@ import * as taskbarGet from "src/app/worldmap/taskbar/taskbar.component"
  * Another source: https://developer.spotify.com/documentation/general/guides/authorization/
 */
 export const authEndpoint = "https://accounts.spotify.com/authorize"
-const redirectUri = "https://ryan-orimaco.github.io/cs322-music/worldmap"
+const redirectUri = "https://ryan-orimaco.github.io/music-charts/worldmap"
 const clientId = "55cf7d7ace8e434c9fbac98db55c75b3"
 const scope = [
   "user-read-currently-playing",
